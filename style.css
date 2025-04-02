@@ -1,0 +1,139 @@
+*{
+    --cl-background: #fff;
+    --cl-text: #2a2a2a;
+    --cl-hover: #aaa;
+    --cl-active: #7b7b7b;
+
+    font-family: Patrick;
+    margin:0;
+}
+
+@font-face {
+    font-family: Patrick;
+    src: url(fonts/PatrickHand-Regular.ttf);
+}
+
+@media (prefers-color-scheme: dark){
+    *{
+        --cl-background: #2a2a2a;
+        --cl-text: #fff;
+        --cl-hover: #aaa;
+        --cl-active: #7b7b7b;
+    }
+}
+html{
+    padding: 2%;
+}
+
+body{
+    width: clamp(26.563em, calc(100% - 2%), 60em);
+    padding: 2%;
+}
+
+html, body{
+    color: var(--cl-text);
+    background: var(--cl-background);
+    margin:0;
+
+    display: grid;
+    justify-items: center;
+}
+
+header, main{
+    display: grid;
+    justify-items: center;
+    background: var(--cl-background);
+}
+
+header{
+    width: 100%;
+    height: auto;
+    
+    padding:1em;
+    margin: 0;
+    border-bottom: 2px solid var(--cl-text);
+
+    position:fixed;
+    top:0;
+
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: stretch;
+
+    p{font-size: 1.5em;}
+    div{padding: 0 1em;}
+    .left{ display: grid; grid-template-columns: auto 5%; justify-items: end; align-items: center; gap: 1em;}
+}
+
+main {
+    width: calc(100% - 2%);
+    
+    grid-template-rows: 2fr 1fr;
+    gap: 2em;
+    padding: 2%;
+    margin:0;
+    position: relative;
+    top: 3.5em;
+
+    article{
+        width: 100%;
+        display: grid;
+        gap: 2em;
+        margin:0;
+
+        border: 2px solid var(--cl-text);
+        border-radius: 1em;
+    }
+
+    img{
+        height: 8em;
+        width: 8em;
+        z-index: 4;
+        border-radius: 1em;
+
+    }
+
+    div {
+        position: relative;
+        height: 8em; width: auto;
+        z-index: 5;
+        padding: 1em;
+    }
+
+    p{font-size: 1.5em;}
+
+    .notimg{
+        border: none;
+    }
+    .wotbord{
+        all:unset;
+    }
+}
+
+/*botón*/
+
+.button:hover{
+    cursor: pointer;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    
+    padding:1em;
+    margin: 0;
+
+    position: fixed;
+    bottom: 0;
+
+    p{padding: 0 1em; text-align: center;}
+}
+
+/*pantalla*/
+
+@media (min-width: 768px) { /*movil - 425 ------ tablet - 768*/
+
+}
+
+@media (max-width: 767px) {
+
+}
