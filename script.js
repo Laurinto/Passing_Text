@@ -26,6 +26,29 @@ function ChanTxt() { //bucle del texto en el que se encuentra
 
 }
 
+/*----- ICONO ESQUINERO -------*/
 
+    function shAside() {
 
+        const left = document.getElementsByClassName('left')[0];
+        const asideA = document.getElementsByTagName('aside')[0];
 
+        if (asideA.style.display === 'none' || asideA.style.display === '' && asideA.style.opacity === '0%') {
+            asideA.style.display = 'block';
+            
+            asideA.style.transition = 'opacity 0.2s ease';
+        
+            setTimeout(() => {
+                asideA.style.opacity = '1';
+            }, 0);
+
+        } else {
+            asideA.style.opacity = '0';
+            asideA.style.transition = 'opacity 0.2s ease';
+        
+            setTimeout(() => {
+                asideA.style.display = 'none';
+            }, 300);
+        }
+
+    }
